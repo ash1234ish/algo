@@ -1,0 +1,38 @@
+package practice.algo.datastructure;
+
+public class MatrixRotation {
+
+	public static void main(String[] args) {
+		int[][] a = {{1,2,3},{4,5,6},{7,8,9}};
+		int n = 3 ;	
+		rotateArray(a,n);
+	}	
+	
+	
+	public static void rotateArray(int [][] arr , int n) {
+		for(int i = 0 ; i < l/2 ; i++) {
+			int first = i;
+			int last = n - 1 - i; 
+			
+			for( int j = first ; j < last ; j++ ) {
+				int offset = i - first;
+				7 int top = matrix[first][i]; // save top
+				8 // left -> top
+				9 matrix[first][i] = matrix[last-offset][first];
+				10
+				11 // bottom -> left
+				12 matrix[last-offset][first] = matrix[last][last - offset];
+				13
+				14 // right -> bottom
+				15 matrix[last][last - offset] = matrix[i][last];
+				16
+				17 // top -> right
+				18 matrix[i][last] = top; // right <- saved top
+			}
+			
+		}
+		
+	}
+}
+
+
