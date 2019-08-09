@@ -1,0 +1,15 @@
+package practice.algo.datastructure;
+
+public class StringDuplicateCharacterReplacement {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public static String charReplacement(String str) {
+		
+		return null ;
+	}
+
+}
