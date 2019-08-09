@@ -17,24 +17,22 @@ public class MatrixRotation {
 	}	
 
 
-	public static void rotateArray(int [][] matrix , int n) {
-		for (int layer = 0; layer < n / 2; ++layer) {
-			int first = layer;
-			int last = n - 1 - layer; 
-			for(int i = first; i < last; ++i) {
-				int offset = i - first;
+	public static void rotateArray(int [][] matrix , int N) {
 
-				int top = matrix[first][i]; 
+		for (int x = 0; x < N / 2; x++) 
+		{ 
+		    for (int y = x; y < N-x-1; y++) 
+		    { 
+			int temp = mat[x][y] ; 
 
-				matrix[first][i] = matrix[last-offset][first];
+			mat[x][y] = mat[N-1-y][x]; 
 
-				matrix[last-offset][first] = matrix[last][last - offset];
+			mat[N-1-y] [x] = mat[N-1-x][N-1-y]; 
 
-				matrix[last][last - offset] = matrix[i][last];
+			mat[N-1-x] [N-1-y] = mat[y][N-1-x] ; 
 
-				matrix[i][last] = top; 
-			}
-
+			mat[y][N-1-x]= temp; 
+		    } 
 		}
 	}
 }
