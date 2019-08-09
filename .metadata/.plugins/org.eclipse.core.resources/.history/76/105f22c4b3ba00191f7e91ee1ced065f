@@ -17,7 +17,7 @@ public class MatrixRotation {
 	}	
 
 
-	public static void rotateArray(int [][] mat , int N) {
+	public static void rotateArray(int [][] matrix , int N) {
 
 		for (int x = 0; x < N / 2; x++) 
 		{ 
