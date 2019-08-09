@@ -1,0 +1,10 @@
+package practice.algo.datastructure;
+
+public class StringSpaceReplacement {
+
+	
+	
+	public static void main(String[] args) {
+		
+	}
+}
