@@ -15,7 +15,7 @@ public class ReverseLinkedListRecursive {
 
 			System.out.println(); 
 			System.out.println("Reversed Linked list:"); 
-			Node llist1 = reverse(llist.head); 
+			Node llist1 = reverse2(llist.head); 
 			printSinglyLinkedList(llist1, " "); 
 
 		}
@@ -38,6 +38,22 @@ public class ReverseLinkedListRecursive {
 			return newHeadNode; 
 		} 
 
+		
+		public static Node reverse2(Node node) { 
+						// last node or only one node 
+			if(node.next == null) { 
+				return node; 
+			} 
+
+			Node current = node;
+			Node newHeadNode = reverse(node.next); 
+
+			node.next.next = node; 
+			node.next = null; 
+
+			return newHeadNode; 
+		}
+		
 		public static void printSinglyLinkedList(Node node, 
 				String sep) { 
 			while (node != null) { 

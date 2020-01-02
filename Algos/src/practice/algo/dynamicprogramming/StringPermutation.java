@@ -4,7 +4,8 @@ public class StringPermutation {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		permutation("","123");
+		String str = "123";
+		permute(str,"");
 
 	}
 
@@ -22,4 +23,12 @@ public class StringPermutation {
 
     }
 	
+	private static void permute(String original,String str) {
+		if(original.length() <= 0) {
+			System.out.println(str);
+			return ;
+		}
+		permute(original.substring(0, original.length() -1),str+original.charAt(original.length() -1));
+		permute(original.substring(0, original.length() -1),str);
+	}	
 }

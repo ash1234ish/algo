@@ -15,4 +15,11 @@ public class LinkedList {
         }  
         this.head = node; 
     }
+    
+    public static void printSinglyLinkedList(Node node, String str) { 
+		while (node != null) { 
+			System.out.println(String.valueOf(node.data) +str); 
+			node = node.next; 
+		} 
+	} 
 }
