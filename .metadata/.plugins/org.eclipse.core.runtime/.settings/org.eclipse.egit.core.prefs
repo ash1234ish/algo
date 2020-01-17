@@ -1,2 +1,4 @@
+GitRepositoriesView.GitDirectories=C\:\\CodeBase\\algorithms\\.git;C\:\\CodeBase\\spring-interview-guide\\.git;C\:\\CodeBase\\okta-legacy-with-cloud-gateway-example\\.git;
+GitRepositoriesView.GitDirectories.relative=.git;C\:\\CodeBase\\spring-interview-guide\\.git;C\:\\CodeBase\\okta-legacy-with-cloud-gateway-example\\.git;
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1
