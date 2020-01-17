@@ -8096,3 +8096,4 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.springfra
 2020-01-17 16:55:13,194 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CodeBase\okta-legacy-with-cloud-gateway-example\legacy-servlet-app\src\main\resources
 2020-01-17 16:55:13,194 [Worker-5: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2020-01-17 16:55:13,194 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\CodeBase\okta-legacy-with-cloud-gateway-example\legacy-servlet-app\src\test\resources
+2020-01-18 00:23:54,474 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
