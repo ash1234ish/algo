@@ -1,8 +1,44 @@
-package practice.algo.datastructure;
+package com.practice.array;
 
-public class MergeSort {
+public class SmallerMissingPositiveNumber {
+
 	
-	public void merge(int arr[], int l, int m, int r) 
+	
+	public static void main(String[] args) {
+		
+	int [] arr = new int[] {7,8,9,10,11}	;
+	
+	SmallerMissingPositiveNumber sm = new SmallerMissingPositiveNumber();
+	
+	System.out.println(sm.firstMissingPositive(arr));
+	
+		
+	}
+public int firstMissingPositive(int[] arr) {
+        
+		sort(arr, 0, arr.length-1); // Sorts in nLogn
+		int firstPositive = -1;
+		for(int i = 1 ; i < arr.length ; i++) {
+			if(arr[i] > 0 && arr[i-1] > 0) {
+				if(firstPositive == -1) {
+					firstPositive = arr[i-1];
+				}
+				if(arr[i] - arr[i-1] == 1) {
+					continue;
+				}
+				else {
+					return arr[i-1]+1;
+				}
+			}
+		}
+		if(firstPositive > 1) {
+			return 1;
+		}else{
+			return arr[arr.length-1]+1;
+		}
+    }
+    
+    	public static void merge(int arr[], int l, int m, int r) 
 	    { 
 	        // Find sizes of two subarrays to be merged 
 	        int n1 = m - l + 1; 
@@ -60,20 +96,19 @@ public class MergeSort {
 	  
 	    // Main function that sorts arr[l..r] using 
 	    // merge() 
-	    public void sort(int arr[], int l, int r) 
+	    public static void sort(int arr[], int l, int r) 
 	    { 
 	        if (l < r) 
 	        { 
-	            // Find the middle point 
+	      
 	            int m = (l+r)/2; 
 	  
-	            // Sort first and second halves 
+	         
 	            sort(arr, l, m); 
 	            sort(arr , m+1, r); 
 	  
-	            // Merge the sorted halves 
+	        
 	            merge(arr, l, m, r); 
 	        } 
 	    }
-
 }

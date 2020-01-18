@@ -51,7 +51,7 @@ public class UniqueCharsInString {
 		
 		char arr[] = str.toCharArray();
 		MergeSort mrgSort = new MergeSort();
-		mrgSort.sort(arr, 0, arr.length-1); 
+		//mrgSort.sort(arr, 0, arr.length-1); 
 		
 		for(int  i =0 ; i< arr.length -1 ; i ++) {
 			if(arr[i] != arr[i+1]) {
