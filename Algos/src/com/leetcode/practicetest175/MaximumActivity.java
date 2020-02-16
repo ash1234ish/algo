@@ -10,6 +10,8 @@ public class MaximumActivity {
 
 		int [][] arr= {{1,5},{1,5},{1,5},{2,3},{2,3}};
 		maxEvents(arr);
+		
+		isPossible(new int[]{9,3,5});
 	}
 
 	public static int maxEvents(int[][] events) {
@@ -38,7 +40,7 @@ public class MaximumActivity {
 		return ans;
 	}
 	
-    public boolean isPossible(int[] target) {
+    public static boolean isPossible(int[] target) {
     	PriorityQueue<Integer> pq = new PriorityQueue<>();
     	for(int v : target){
     		pq.add(-v);

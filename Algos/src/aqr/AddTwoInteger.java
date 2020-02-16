@@ -54,7 +54,7 @@ public class AddTwoInteger {
 	
 	int buyCards(int[] ids, int d) {
 
-	    ids.str
+	   return 0;
 	    
 	}
 
