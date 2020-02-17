@@ -13,7 +13,7 @@ public class AddTwoInteger {
 //			 {1,16,19,2,18}};
 			{{1,2},{3,4}};
 		
-		matrixSummation(after);
+		//matrixSummation(after);
 	}
 
 	int[][] matrixSummation(int[][] after) {
