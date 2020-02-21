@@ -7,7 +7,7 @@ public class SearchForRange {
 	public static void main(String[] args) {
 		
 		int [] arr= new int [] {5,7,7,8,8,10};
-		Arrays.stream(searchRange(arr,1)).forEach(System.out::println);
+		Arrays.stream(searchRange(arr,5)).forEach(System.out::println);
 	}
 	
 	public static int[] searchRange(int []arr, int target) {
@@ -17,13 +17,13 @@ public class SearchForRange {
 		
 		int low =0 ,high = arr.length -1;
 		
-		while(low < high) {
+		while(low <= high) {
 			int mid = (low+high)/2;
 			
 			if(arr[mid] == target) {
 				int i = mid , j = mid;
-				while(arr[i]==target) {i--;}
-				while(arr[j]== target){j++;}
+				while(i >= 0 && arr[i]==target ) {i--;}
+				while(j <= arr.length -1 && arr[j]== target){j++;}
 				return new int[] {i+1,j-1};
 			}
 			if(target < arr[mid]) {
