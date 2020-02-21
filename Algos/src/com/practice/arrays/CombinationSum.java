@@ -6,33 +6,28 @@ import java.util.List;
 public class CombinationSum {
 	public static void main(String[] args) {
 		int arr [] = {2,2,3,7};
-		combinationSum(arr,0,new ArrayList<Integer>(),7);
+		combinationSum(arr,new ArrayList<Integer>(),7,0);
 		
 	}
 	
-	public static void combinationSum(int arr[],int index, List<Integer> list , int sum) {
-		if(index >= arr.length || sum < 0 )
-			return;
-		
-		if(sum == 0) {
+	public static void combinationSum(int [] originalArray,List<Integer> list, int sum, int index) {
+		if(sum ==0) {
+			System.out.println("Found one");
 			list.stream().forEach(System.out::print);
 			return;
 		}
-		if(list.size() > 0 ) {
-			if(arr[index] == (list.get(list.size() -1) +1)) {
-				combinationSum(arr, index+1, getList(list,arr,index),sum-arr[index]);
-			}
-			combinationSum(arr, index+1, list,sum);
-		}else{
-			combinationSum(arr, index+1, getList(list,arr,index),sum-arr[index]);
-			combinationSum(arr, index+1, list,sum);
-		}
+		 
+		if(sum < 0 || index >=originalArray.length)
+			return;
+		
+		List newList = getList(list,index,originalArray);
+		combinationSum(originalArray, newList, sum-originalArray[index],index+1);
+		newList.remove(newList.size()-1);
+		combinationSum(originalArray,newList, sum,index+1);
 	}	
 	
-	private static List<Integer> getList(List<Integer> list,int [] originalArray,int index){
-		list.add(originalArray[index]);
+	private static List<Integer> getList(List<Integer> list,int index,int [] originalArray){
+			list.add(originalArray[index]);
 		return list;
 	}
-	
-	
 }
