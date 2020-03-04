@@ -6,7 +6,7 @@ public class NextPermutation {
 
 	public static void main(String[] args) {
 		NextPermutation nxt = new NextPermutation();
-		int [] arr = new int[] {1,2,3};
+		int [] arr = new int[] {1,3,2};
 		int firstDecreasingIndex = getDecreasingIndex(arr);
 		int largerIndex = findJustLargerElement(firstDecreasingIndex,arr);
 		arr = swap(arr,firstDecreasingIndex,largerIndex);
@@ -17,8 +17,11 @@ public class NextPermutation {
 
 	public static int getDecreasingIndex(int [] arr) {
 		for(int i = arr.length -2; i>=0 ; i--) {
-			if(arr[i-1] < arr[i]) {
+			if(i-1 >=0 && arr[i-1] <= arr[i]) {
 				return i;
+			}else {
+				return i;
+				
 			}
 		}
 		return -1;
@@ -29,8 +32,8 @@ public class NextPermutation {
 		int difference = Integer.MIN_VALUE;
 		
 		for(int i = firstDecreasingIndex+1; i< arr.length ; i++) {
-			if(arr[firstDecreasingIndex] < arr[i]) {
-				if(difference < (arr[i] -arr[firstDecreasingIndex])) {
+			if(arr[firstDecreasingIndex] <= arr[i]) {
+				if(difference <= (arr[i] -arr[firstDecreasingIndex])) {
 					difference =   arr[i] -arr[firstDecreasingIndex];
 					largerIndex =  i;
 				}
